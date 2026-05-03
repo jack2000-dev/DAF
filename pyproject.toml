@@ -1,0 +1,15 @@
+[project]
+name = "daf-project"
+version = "0.1.0"
+description = "Data Analysis Framework project"
+requires-python = ">=3.11"
+dependencies = [
+    # Keep this list minimal — add only what your analysis actually uses.
+    # uv add pandas pyarrow jupyterlab matplotlib pyyaml python-dotenv
+]
+
+[dependency-groups]
+dev = [
+    # Add dev tools as needed, e.g.:
+    #   uv add --dev ruff pytest
+]
