@@ -10,13 +10,18 @@ Data Analysis Framework. Template for new data analysis projects. Reproducible, 
 # 1. Clone or copy this template, then enter the project dir
 cd your-project-name
 
-# 2. Create env via uv (reads .python-version)
+# 2. One-shot init — prompts for name, python version, author.
+#    Rewrites pyproject.toml, .python-version, README.md, Makefile.
+#    Self-destructs (deletes MANUAL.md + this script) afterwards.
+make init
+
+# 3. Create env via uv (reads .python-version)
 uv sync
 
-# 3. Add the packages you need (template ships with empty deps)
+# 4. Add the packages you need (template ships with empty deps)
 uv add pandas pyarrow jupyterlab matplotlib python-dotenv
 
-# 4. Start analysis
+# 5. Start analysis
 uv run jupyter lab notebooks/00_eda_template.ipynb
 ```
 
